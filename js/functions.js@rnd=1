@@ -1,0 +1,13 @@
+// всплывающаЯ подсказка сверху 
+function show_tip_top(elementID,text){if(document.body.clientWidth >= 1024){$('#'+elementID).poshytip('destroy');$('#'+elementID).poshytip({content:text,alignTo:'target',alignX:'right',alignY:'center',className:'tip-yellowsimple',bgImageFrameSize:9,offsetY:0,offsetX:7});$('#'+elementID).poshytip('show');}}
+
+function openTgLink(){$.post("ajax_scripts/getProxyTelegram.php",{idBk:1}).done(function(data){window.location.replace(data)})}
+
+//Функция закрытия окна fancybox
+function Closefancybox(){
+	$.fancybox.close();
+}
+// смена картинки на галочку при подписке успешной
+function changeMailer(id){
+	$("#mailer"+id).attr("src","images/valid.png");
+}

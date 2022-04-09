@@ -1,0 +1,1 @@
+$("body").on("click",".faq-block__question",function(){let n=$(this);n.hasClass("open")?(n.removeClass("open"),n.parent().find(".faq-block__answer").slideUp()):($(".faq-block .open").removeClass("open").parent().find(".faq-block__answer").slideUp(),n.addClass("open"),n.parent().find(".faq-block__answer").slideDown())})
